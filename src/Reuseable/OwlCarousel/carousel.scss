@@ -1,0 +1,19 @@
+.owl-carousel {
+    .owl-nav {
+        position: absolute;
+        width: 100%;
+        top: calc(35%);
+        font-size: 3rem;
+        .owl-prev {
+            position: absolute;
+            left: -3rem;
+        }
+        .owl-next {
+            position: absolute;
+            right: -3rem;
+        }
+    }
+    .owl-dots {
+        padding: 2rem 0;
+    }
+}

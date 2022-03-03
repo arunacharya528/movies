@@ -1,0 +1,243 @@
+// header font
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
+// all font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+:root {
+    --color1: #b243f7;
+    --color2: #7b3ce3;
+    --color3: #4447e2;
+    --background-color: #171a23;
+    --disabled-color: #3f4857;
+    --light-disabled-color: #1d202b;
+}
+
+$color1:#b243f7;
+$color2:#7b3ce3;
+$color3: #4447e2;
+$gradient:linear-gradient(90deg,
+var(--color1) 0%,
+var(--color2) 100%);
+body {
+    background-color: var(--background-color);
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+.banner {
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+    background: $gradient;
+    border: none;
+    border-radius: 3rem;
+    padding: 0.4rem 3rem;
+    font-family: "Kanit", sans-serif;
+}
+
+.badge-primary {
+    color: var(--color1);
+    padding: 0;
+}
+
+.nav-item {
+    margin: auto 1rem;
+}
+
+nav {
+    a {
+        color: white;
+    }
+    a:hover {
+        color: white;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+.title-font {
+    font-family: "Kanit", sans-serif;
+}
+
+.poster {
+    width: 70%;
+    border-radius: 1rem;
+}
+
+.rating i {
+    color: var(--color1);
+}
+
+.description {
+    font-size: small;
+    color: var(--disabled-color);
+}
+
+.full-screen {
+    min-height: 100vh;
+}
+
+.advanced-search {
+    display: grid;
+    // grid-template-columns: 30vw 15vw 10vw 12vw auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
+    margin: 2rem 0;
+    .form-group {
+        background-color: var(--light-disabled-color);
+        border-radius: 3rem;
+    }
+    input[type="text"],
+    select {
+        background-color: #00000000;
+        border: none;
+        color: white;
+        @extend .title-font;
+    }
+    input[type="text"] {
+        padding: 0.4rem 2rem;
+    }
+    select {
+        height: 100%;
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+    input[type="text"]::placeholder {
+        color: white;
+    }
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1.5rem;
+    .movie-thumbnail {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .detail {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            padding: 1rem;
+            background: linear-gradient(0deg, var(--light-disabled-color) 0%, #00000000 100%);
+            border-radius: 0 0 1rem 1rem;
+        }
+    }
+}
+
+.pagination {
+    .page {
+        background-color: var(--color1);
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        margin: 0 0.2rem;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .transparent {
+        background-color: #00000000;
+    }
+}
+
+.movie-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 1.5rem;
+    .movie-thumbnail {
+        background-color: var(--light-disabled-color);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-size: small;
+        img {
+            width: 50%;
+        }
+        .detail {
+            width: 50%;
+            padding: 1rem;
+            .rating {
+                color: white;
+                font-size: small;
+            }
+        }
+    }
+}
+
+.subscription {
+    // position: relative;
+    background-color: var(--disabled-color);
+    img {
+        width: 100%;
+        height: 300px;
+        object-position: 20% 10%;
+        object-fit: cover;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        input[type="text"] {
+            background-color: var(--light-disabled-color);
+            border: none;
+            border-radius: 3rem;
+            padding: 0.4rem 1rem;
+            width: 60%;
+        }
+        input[type="text"]::placeholder {
+            @extend .title-font;
+            color: white;
+        }
+        // button {
+        //   position: absolute;
+        //   left: 13rem;
+        // }
+    }
+}
+
+footer {
+    .logo {
+        font-weight: bolder;
+    }
+    ul {
+        list-style-type: none;
+        .nav-link {
+            color: white;
+        }
+        .nav-link:hover {
+            color: white;
+        }
+    }
+    .social_media {
+        * {
+            padding: 0 0.2rem;
+        }
+    }
+}
+
+#disclosure {
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background-color: red;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    p {
+        margin: 0;
+        a {
+            color: white;
+        }
+    }
+}
